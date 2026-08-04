@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="学生のための営業職理解ガイド。営業は業界によって売るもの・相手・売り方・評価のされ方がまったく違います。10業界の営業を動画と1日の流れで比較できます。">
+<title>営業職まるわかりナビ｜業界でこんなに違う「営業」の中身</title>
+<style>
+:root{
+  --ink:#1f2933; --ink-soft:#52606d; --ink-faint:#7b8794;
+  --paper:#fbfaf7; --card:#ffffff; --line:#e3e0d8;
+  --accent:#1f6f5c; --accent-soft:#e6f2ee; --accent-deep:#14503f;
+  --warm:#c96a3c; --warm-soft:#fbeee6;
+  --blue:#2f5d8c; --blue-soft:#e7eef6;
+  --purple:#6b4f8a; --purple-soft:#efe9f5;
+  --base:16px; --radius:14px;
+  --shadow:0 1px 2px rgba(31,41,51,.05), 0 8px 24px rgba(31,41,51,.06);
+}
+html[data-zoom="big"]{--base:19px;}
+html[data-zoom="huge"]{--base:22px;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:82px;}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;
+  font-size:var(--base); line-height:1.85; letter-spacing:.01em;
+}
+img{max-width:100%;}
+a{color:var(--accent-deep);}
+
+/* ---------- nav ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.topbar-inner{max-width:1180px;margin:0 auto;padding:.55rem 1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.brand{font-weight:800;font-size:1.02rem;letter-spacing:.02em;white-space:nowrap;}
+.brand span{color:var(--accent);}
+.navlinks{display:flex;gap:.15rem;flex-wrap:wrap;flex:1;}
+.navlinks a{text-decoration:none;color:var(--ink-soft);font-size:.82rem;font-weight:600;padding:.35rem .6rem;border-radius:999px;white-space:nowrap;}
+.navlinks a:hover{background:var(--accent-soft);color:var(--accent-deep);}
+.zoomctl{display:flex;align-items:center;gap:.3rem;font-size:.75rem;color:var(--ink-faint);}
+.zoomctl button{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:.22rem .5rem;cursor:pointer;font-size:.78rem;font-weight:700;color:var(--ink-soft);font-family:inherit;}
+.zoomctl button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent);}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.2rem 5rem;}
+section{padding-top:3.2rem;}
+h2{font-size:1.55rem;line-height:1.4;margin:0 0 .3rem;letter-spacing:.01em;display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;}
+h2 .num{font-size:.72rem;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:.2rem .55rem;border-radius:999px;letter-spacing:.08em;}
+.lead{color:var(--ink-soft);margin:.4rem 0 1.6rem;max-width:64ch;}
+h3{font-size:1.12rem;margin:2rem 0 .6rem;}
+
+/* ---------- hero ---------- */
+.hero{padding:3.4rem 0 1rem;}
+.hero .kicker{font-size:.78rem;font-weight:800;letter-spacing:.14em;color:var(--warm);margin-bottom:.7rem;}
+.hero h1{font-size:2.5rem;line-height:1.32;margin:0 0 1rem;letter-spacing:.005em;font-weight:800;}
+.hero h1 em{font-style:normal;color:var(--accent);}
+.hero p{font-size:1.02rem;color:var(--ink-soft);max-width:62ch;margin:0 0 1.4rem;}
+.hero-cta{display:flex;gap:.6rem;flex-wrap:wrap;}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.9rem;padding:.7rem 1.3rem;border-radius:999px;border:1.5px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer;font-family:inherit;}
+.btn.ghost{background:transparent;color:var(--accent-deep);}
+.btn:hover{filter:brightness(1.08);}
+
+.strip{background:var(--warm-soft);border:1px solid #f0dccf;border-radius:var(--radius);padding:1.4rem 1.5rem;margin-top:2.2rem;}
+.strip h4{margin:0 0 .7rem;font-size:1rem;color:var(--warm);}
+.strip ul{margin:0;padding-left:1.2rem;color:var(--ink-soft);}
+.strip li{margin-bottom:.25rem;}
+.strip .fix{margin-top:1rem;padding-top:.9rem;border-top:1px dashed #e0c4b0;font-weight:700;color:var(--ink);}
+
+/* ---------- map ---------- */
+.mapgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;}
+.mapcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem 1.3rem;box-shadow:var(--shadow);}
+.mapcard h4{margin:0 0 .2rem;font-size:1rem;}
+.mapcard .who{font-size:.78rem;font-weight:800;letter-spacing:.06em;margin-bottom:.5rem;}
+.mapcard p{margin:0 0 .7rem;font-size:.9rem;color:var(--ink-soft);}
+.mapcard .jobs{display:flex;flex-wrap:wrap;gap:.3rem;}
+.mapcard .jobs span{font-size:.78rem;background:var(--paper);border:1px solid var(--line);padding:.16rem .55rem;border-radius:999px;}
+.m1{border-top:4px solid var(--accent);} .m1 .who{color:var(--accent);}
+.m2{border-top:4px solid var(--blue);} .m2 .who{color:var(--blue);}
+.m3{border-top:4px solid var(--warm);} .m3 .who{color:var(--warm);}
+
+/* ---------- filters ---------- */
+.filters{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.4rem;}
+.chip{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:.4rem .95rem;font-size:.85rem;font-weight:700;color:var(--ink-soft);cursor:pointer;font-family:inherit;}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;}
+
+/* ---------- job cards ---------- */
+.jobs-list{display:flex;flex-direction:column;gap:1.1rem;}
+.job{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:90px;}
+.job.hidden{display:none;}
+.job-head{display:flex;align-items:flex-start;gap:1rem;padding:1.2rem 1.4rem;cursor:pointer;user-select:none;border-left:6px solid var(--accent);}
+.job-head:hover{background:#fcfcfa;}
+.job-badge{flex:none;width:52px;height:52px;border-radius:12px;background:var(--accent-soft);color:var(--accent-deep);display:grid;place-items:center;font-size:1.5rem;}
+.job-titles{flex:1;min-width:0;}
+.job-titles h3{margin:0;font-size:1.22rem;line-height:1.4;}
+.job-titles .catch{color:var(--ink-soft);font-size:.9rem;margin-top:.15rem;}
+.job-tags{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.5rem;}
+.job-tags span{font-size:.72rem;font-weight:700;padding:.14rem .5rem;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--ink-faint);}
+.toggle{flex:none;align-self:center;font-size:.78rem;font-weight:800;color:var(--accent);display:flex;align-items:center;gap:.3rem;white-space:nowrap;}
+.toggle .arw{transition:transform .2s;display:inline-block;}
+.job[open-state="1"] .toggle .arw{transform:rotate(180deg);}
+.job-body{display:none;padding:0 1.4rem 1.5rem;border-top:1px solid var(--line);}
+.job[open-state="1"] .job-body{display:block;}
+
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:1.6rem;margin-top:1.3rem;}
+@media(max-width:820px){.split{grid-template-columns:1fr;}}
+
+.blk{margin-bottom:1.3rem;}
+.blk h5{margin:0 0 .5rem;font-size:.78rem;font-weight:800;letter-spacing:.09em;color:var(--accent);}
+.blk ul{margin:0;padding-left:1.15rem;}
+.blk li{margin-bottom:.28rem;font-size:.93rem;}
+.blk p{margin:0;font-size:.93rem;color:var(--ink-soft);}
+
+/* 商材プロフィール（営業版で追加） */
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.5rem;}
+.specbox{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.55rem .75rem;}
+.specbox b{display:block;font-size:.7rem;font-weight:800;letter-spacing:.06em;color:var(--ink-faint);margin-bottom:.1rem;}
+.specbox span{font-size:.88rem;font-weight:700;}
+
+.timeline{list-style:none;margin:0;padding:0;}
+.timeline li{display:flex;gap:.8rem;font-size:.9rem;padding:.3rem 0;border-bottom:1px dotted var(--line);}
+.timeline li:last-child{border-bottom:none;}
+.timeline .t{flex:none;width:4.6em;font-weight:800;color:var(--warm);font-variant-numeric:tabular-nums;}
+
+.tools{display:flex;flex-wrap:wrap;gap:.35rem;}
+.tools span{font-size:.82rem;background:var(--blue-soft);color:var(--blue);padding:.2rem .6rem;border-radius:6px;font-weight:600;}
+
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
+@media(max-width:560px){.fit{grid-template-columns:1fr;}}
+.fitbox{border-radius:10px;padding:.85rem 1rem;font-size:.9rem;}
+.fitbox h6{margin:0 0 .35rem;font-size:.82rem;font-weight:800;letter-spacing:.05em;}
+.fit-good{background:var(--accent-soft);} .fit-good h6{color:var(--accent-deep);}
+.fit-hard{background:#fdf3ef;} .fit-hard h6{color:var(--warm);}
+.fitbox ul{margin:0;padding-left:1.05rem;}
+.fitbox li{margin-bottom:.2rem;}
+
+.path{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;font-size:.85rem;font-weight:700;}
+.path span{background:var(--purple-soft);color:var(--purple);padding:.28rem .7rem;border-radius:8px;}
+.path i{color:var(--ink-faint);font-style:normal;}
+
+.videos{display:flex;flex-direction:column;gap:1.1rem;}
+.vid{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:.9rem;}
+.vid .vtitle{font-size:.86rem;font-weight:700;margin-bottom:.15rem;line-height:1.5;}
+.vid .vmeta{font-size:.74rem;color:var(--ink-faint);margin-bottom:.6rem;}
+.vid .vmeta b{color:var(--accent);}
+.ratio{position:relative;padding-top:56.25%;border-radius:8px;overflow:hidden;background:#000;}
+.ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.vid .vpoint{margin-top:.6rem;font-size:.82rem;color:var(--ink-soft);background:var(--card);border-left:3px solid var(--warm);padding:.5rem .7rem;border-radius:0 6px 6px 0;}
+.vid .vpoint b{color:var(--warm);}
+
+/* ---------- vs（対比表） ---------- */
+.vs{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:1.6rem;}
+.vs-row{display:grid;grid-template-columns:9em 1fr 1fr;border-bottom:1px solid var(--line);}
+.vs.three .vs-row{grid-template-columns:9em 1fr 1fr 1fr;}
+.vs-row:last-child{border-bottom:none;}
+.vs-row>div{padding:.75rem .9rem;font-size:.88rem;}
+.vs-row .lbl{background:var(--paper);font-weight:800;font-size:.8rem;color:var(--ink-soft);display:flex;align-items:center;}
+.vs-row .a,.vs-row .b,.vs-row .c{border-left:1px solid var(--line);color:var(--ink-soft);}
+.vs-row .b{background:#f7fbfa;}
+.vs-head>div{font-weight:800;font-size:.85rem;padding:.7rem .9rem;}
+.vs-head .a,.vs-head .c{color:var(--ink-faint);} .vs-head .b{color:var(--accent-deep);}
+.vs-cap{font-size:.8rem;font-weight:800;letter-spacing:.05em;color:var(--accent);margin:1.6rem 0 .5rem;}
+@media(max-width:760px){
+  .vs-row,.vs.three .vs-row{grid-template-columns:1fr;}
+  .vs-row .lbl{border-bottom:1px solid var(--line);}
+  .vs-row .a,.vs-row .b,.vs-row .c{border-left:none;}
+  .vs-row .a::before,.vs-row .b::before,.vs-row .c::before{content:attr(data-l) "：";font-weight:800;color:var(--ink-faint);}
+  .vs-row .b::before{color:var(--accent-deep);}
+  .vs-head{display:none;}
+}
+
+/* ---------- process ---------- */
+.proc{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1rem;}
+.pcard{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:var(--radius);padding:1.05rem 1.2rem;box-shadow:var(--shadow);}
+.pcard .st{font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--accent);background:var(--accent-soft);display:inline-block;padding:.15rem .55rem;border-radius:999px;margin-bottom:.5rem;}
+.pcard h4{margin:0 0 .35rem;font-size:1rem;}
+.pcard p{margin:0 0 .6rem;font-size:.88rem;color:var(--ink-soft);}
+.pcard .dif{font-size:.82rem;background:var(--blue-soft);color:var(--blue);border-radius:8px;padding:.5rem .7rem;}
+.pcard .dif b{color:var(--blue);}
+
+/* ---------- real ---------- */
+.realgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;}
+.realcard{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--warm);border-radius:var(--radius);padding:1.1rem 1.25rem;box-shadow:var(--shadow);}
+.realcard h4{margin:0 0 .4rem;font-size:1rem;}
+.realcard p{margin:0 0 .6rem;font-size:.9rem;color:var(--ink-soft);}
+.realcard .tip{font-size:.83rem;background:var(--warm-soft);border-radius:8px;padding:.5rem .75rem;color:#8a4526;}
+.realcard .tip b{color:var(--warm);}
+
+/* ---------- career ---------- */
+.ladder{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.8rem;margin-bottom:1.4rem;}
+.step{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--purple);border-radius:var(--radius);padding:1rem 1.15rem;box-shadow:var(--shadow);}
+.step .yr{font-size:.72rem;font-weight:800;letter-spacing:.07em;color:var(--purple);background:var(--purple-soft);display:inline-block;padding:.15rem .55rem;border-radius:999px;margin-bottom:.5rem;}
+.step h4{margin:0 0 .35rem;font-size:1rem;}
+.step p{margin:0;font-size:.87rem;color:var(--ink-soft);}
+.branch{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1rem;}
+.brcard{background:var(--blue-soft);border-radius:var(--radius);padding:1.05rem 1.2rem;}
+.brcard h4{margin:0 0 .35rem;font-size:.98rem;color:var(--blue);}
+.brcard p{margin:0;font-size:.88rem;color:var(--ink-soft);}
+
+/* ---------- skills ---------- */
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;}
+.skillcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.1rem 1.25rem;box-shadow:var(--shadow);}
+.skillcard .ic{font-size:1.5rem;}
+.skillcard h4{margin:.4rem 0 .35rem;font-size:1rem;}
+.skillcard p{margin:0 0 .6rem;font-size:.88rem;color:var(--ink-soft);}
+.skillcard .ex{font-size:.82rem;background:var(--accent-soft);border-radius:8px;padding:.5rem .7rem;color:var(--accent-deep);}
+
+/* ---------- table ---------- */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);}
+table{border-collapse:collapse;width:100%;font-size:.86rem;}
+#gyoTable{min-width:1080px;}
+#cmpTable{min-width:980px;}
+th,td{padding:.7rem .8rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+thead th{background:var(--accent-soft);color:var(--accent-deep);font-size:.78rem;letter-spacing:.04em;position:sticky;top:0;}
+tbody tr:hover{background:#fcfcfa;}
+td.jobname{font-weight:800;white-space:nowrap;}
+td.gyoname{font-weight:800;}
+.dots{letter-spacing:.12em;color:var(--accent);white-space:nowrap;font-size:.95rem;}
+.dots i{color:#d9d6cd;font-style:normal;}
+.tagS{font-size:.72rem;font-weight:800;padding:.1rem .45rem;border-radius:999px;white-space:nowrap;}
+.t-yu{background:var(--warm-soft);color:#8a4526;}
+.t-mu{background:var(--purple-soft);color:var(--purple);}
+.t-bb{background:var(--blue-soft);color:var(--blue);}
+.t-bc{background:var(--accent-soft);color:var(--accent-deep);}
+
+/* ---------- quiz ---------- */
+.quiz{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem 1.6rem;box-shadow:var(--shadow);}
+.q{margin-bottom:1.4rem;}
+.q p{margin:0 0 .6rem;font-weight:700;font-size:.98rem;}
+.q p b{color:var(--accent);margin-right:.4rem;}
+.opts{display:flex;gap:.5rem;flex-wrap:wrap;}
+.opts button{border:1.5px solid var(--line);background:var(--paper);border-radius:10px;padding:.55rem 1rem;font-size:.88rem;cursor:pointer;font-family:inherit;color:var(--ink-soft);font-weight:600;text-align:left;}
+.opts button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;}
+.quiz-actions{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;}
+#result{margin-top:1.4rem;display:none;}
+#result.show{display:block;}
+.rescard{background:var(--accent-soft);border-radius:12px;padding:1.1rem 1.3rem;margin-bottom:.7rem;}
+.rescard .rank{font-size:.75rem;font-weight:800;letter-spacing:.08em;color:var(--accent);}
+.rescard h4{margin:.2rem 0 .3rem;font-size:1.12rem;}
+.rescard p{margin:0 0 .6rem;font-size:.9rem;color:var(--ink-soft);}
+.rescard a{font-size:.85rem;font-weight:700;}
+.note{font-size:.82rem;color:var(--ink-faint);margin-top:.8rem;}
+
+/* ---------- axes ---------- */
+.axis{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:var(--radius);padding:1.1rem 1.3rem;margin-bottom:.9rem;box-shadow:var(--shadow);}
+.axis h4{margin:0 0 .35rem;font-size:1.02rem;}
+.axis h4 b{color:var(--blue);margin-right:.4rem;}
+.axis p{margin:0 0 .6rem;font-size:.92rem;color:var(--ink-soft);}
+.axis .ask{font-size:.86rem;background:var(--blue-soft);color:var(--blue);border-radius:8px;padding:.55rem .8rem;font-weight:600;}
+
+/* ---------- checklist ---------- */
+.checklist{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.5rem;box-shadow:var(--shadow);}
+.checklist label{display:flex;gap:.7rem;align-items:flex-start;padding:.55rem 0;border-bottom:1px dotted var(--line);cursor:pointer;font-size:.93rem;}
+.checklist label:last-child{border-bottom:none;}
+.checklist input{margin-top:.45rem;width:1.05em;height:1.05em;accent-color:var(--accent);flex:none;}
+.checklist .sub{display:block;font-size:.82rem;color:var(--ink-faint);font-weight:400;}
+.checklist input:checked + span{color:var(--ink-faint);text-decoration:line-through;}
+
+footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0 3rem;font-size:.82rem;color:var(--ink-faint);}
+footer h4{font-size:.85rem;color:var(--ink-soft);margin:0 0 .5rem;}
+footer ul{margin:0 0 1.2rem;padding-left:1.1rem;}
+footer li{margin-bottom:.2rem;}
+footer a{color:var(--ink-soft);}
+
+@media print{
+  .topbar,.filters,.quiz-actions,.hero-cta{display:none;}
+  .job-body{display:block !important;}
+  .ratio{display:none;}
+  body{font-size:11pt;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">営業職<span>まるわかり</span>ナビ</div>
+    <nav class="navlinks">
+      <a href="#map">全体地図</a>
+      <a href="#gyokai">業界で何が違う</a>
+      <a href="#zukan">職種図鑑</a>
+      <a href="#process">仕事の流れ</a>
+      <a href="#real">営業のリアル</a>
+      <a href="#career">キャリア</a>
+      <a href="#hikaku">比較表</a>
+      <a href="#shindan">診断</a>
+      <a href="#erabikata">選び方</a>
+      <a href="#check">求人票チェック</a>
+    </nav>
+    <div class="zoomctl">
+      <span>文字</span>
+      <button data-zoom="normal" aria-pressed="true">標準</button>
+      <button data-zoom="big" aria-pressed="false">大</button>
+      <button data-zoom="huge" aria-pressed="false">特大</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">学生のための 営業職・業界理解ガイド</div>
+  <h1>「営業」という職種は、<br><em>業界の数だけ存在します。</em></h1>
+  <p>
+    食品メーカーの営業とIT企業の営業と不動産の営業は、求人票では同じ「営業職」と書かれます。
+    けれど<strong>売るもの・売る相手・出会い方・決まるまでの時間・評価のされ方は、まったく別の仕事</strong>です。
+    このページでは10業界の営業を動画と1日の流れで見比べ、「自分はどの型の営業なら続けられるか」を判断できる状態を目指します。
+  </p>
+  <div class="hero-cta">
+    <a class="btn" href="#gyokai">業界による違いを見る</a>
+    <a class="btn ghost" href="#zukan">10業界の職種図鑑へ</a>
+  </div>
+
+  <div class="strip">
+    <h4>こんな理由で、営業職を決めたり避けたりしていませんか？</h4>
+    <ul>
+      <li>「人と話すのが好きだから営業」——<strong>どの業界の営業かは考えていない</strong></li>
+      <li>「ノルマがきつそう」と聞いて避けているが、<strong>ノルマの中身も業界差も知らない</strong></li>
+      <li>「営業は口がうまい人がやる仕事」だと思っている</li>
+      <li>とりあえず営業職で受けているが、志望動機がどの会社でも同じ文章になる</li>
+    </ul>
+    <div class="fix">
+      → 営業職は<strong>「何を・誰に・どう売るか」で中身が決まります。</strong>まずそこを分解すれば、志望動機は自然と会社ごとに変わります。
+    </div>
+  </div>
+</header>
+
+<!-- ============ 全体地図 ============ -->
+<section id="map">
+  <h2><span class="num">MAP</span>営業を見分ける3つの分け方</h2>
+  <p class="lead">
+    営業職の求人を読むときは、この3つを順番に確認してください。<strong>この3つが決まれば、その仕事の1日はほぼ想像がつきます。</strong>
+  </p>
+  <div class="mapgrid">
+    <div class="mapcard m1">
+      <div class="who">分け方 1｜誰に売るか</div>
+      <h4>法人（BtoB）／個人（BtoC）／代理店</h4>
+      <p>相手が会社なら、決めるのは担当者ではなく組織です。稟議・比較検討・複数人への説明が必要になります。相手が個人なら、目の前の人の感情と生活に向き合う仕事になります。</p>
+      <div class="jobs"><span>法人＝メーカー・IT・広告</span><span>個人＝保険・不動産・自動車</span><span>代理店＝間接販売</span></div>
+    </div>
+    <div class="mapcard m2">
+      <div class="who">分け方 2｜何を売るか</div>
+      <h4>有形商材／無形商材</h4>
+      <p>形があるものは、見せられる・触らせられる・スペックで比較される。形がないもの（サービス・仕組み・保障・広告枠）は、<strong>売る人の説明そのものが商品</strong>になります。</p>
+      <div class="jobs"><span>有形＝食品・機器・住宅・車</span><span>無形＝IT・広告・保険・人材</span></div>
+    </div>
+    <div class="mapcard m3">
+      <div class="who">分け方 3｜どう出会うか</div>
+      <h4>新規開拓／ルート（既存）／反響</h4>
+      <p>自分から探しに行くのか、決まった取引先を回るのか、問い合わせてきた人に対応するのか。<strong>ここが「営業はきつい」と言われるかどうかを一番左右します。</strong></p>
+      <div class="jobs"><span>新規＝飛び込み・テレアポ</span><span>ルート＝定期訪問</span><span>反響＝来店・問い合わせ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 業界で何が違うか（本セクションが中心） ============ -->
+<section id="gyokai">
+  <h2><span class="num">GYOKAI</span>業界で、営業はここまで違う</h2>
+  <p class="lead">
+    ここがこのページの中心です。同じ「営業職」でも、業界が変われば<strong>1日の過ごし方も、成果の測られ方も、必要な勉強も別物</strong>になります。
+    まず4つの対比で違いの構造をつかみ、そのあと12業界の早見表で確認してください。
+  </p>
+
+  <div class="vs-cap">対比 1 ｜ 何を売るか</div>
+  <div class="vs">
+    <div class="vs-row vs-head"><div class="lbl"></div><div class="a">有形商材（形がある）</div><div class="b">無形商材（形がない）</div></div>
+    <div class="vs-row"><div class="lbl">代表例</div><div class="a" data-l="有形">食品、機械、OA機器、住宅、自動車、医療機器</div><div class="b" data-l="無形">ITシステム、広告、人材サービス、保険、コンサル</div></div>
+    <div class="vs-row"><div class="lbl">商談での武器</div><div class="a" data-l="有形">現物・カタログ・スペック・実績。見せられるので伝わりやすい</div><div class="b" data-l="無形">提案書と言葉。<strong>営業の説明そのものが商品の一部</strong>になる</div></div>
+    <div class="vs-row"><div class="lbl">比較のされ方</div><div class="a" data-l="有形">他社製品と機能・価格で直接比べられる</div><div class="b" data-l="無形">「本当に効果が出るのか」を信じてもらえるかで決まる</div></div>
+    <div class="vs-row"><div class="lbl">未経験の入りやすさ</div><div class="a" data-l="有形">商品を覚えれば話せるので、入口としては入りやすい</div><div class="b" data-l="無形">最初の半年は説明が難しい。ただし力がつくと転職市場で評価が高い</div></div>
+    <div class="vs-row"><div class="lbl">納品後</div><div class="a" data-l="有形">納品して完了。次の注文をもらいに行く</div><div class="b" data-l="無形">使ってもらって初めて成果。導入後の支援まで続くことが多い</div></div>
+  </div>
+
+  <div class="vs-cap">対比 2 ｜ 誰に売るか</div>
+  <div class="vs">
+    <div class="vs-row vs-head"><div class="lbl"></div><div class="a">法人営業（BtoB）</div><div class="b">個人営業（BtoC）</div></div>
+    <div class="vs-row"><div class="lbl">決める人</div><div class="a" data-l="法人">担当者→課長→役員と、決裁が段階的。会ってる人が決定者とは限らない</div><div class="b" data-l="個人">目の前の本人（＋家族）。その場で気持ちが動けば決まることもある</div></div>
+    <div class="vs-row"><div class="lbl">判断の基準</div><div class="a" data-l="法人">費用対効果、実績、リスク。「社内をどう説得するか」まで一緒に考える</div><div class="b" data-l="個人">安心できるか、この人から買いたいか。感情の比重が大きい</div></div>
+    <div class="vs-row"><div class="lbl">働く時間</div><div class="a" data-l="法人">相手も会社員なので平日日中。土日は休みやすい</div><div class="b" data-l="個人">相手の都合に合わせる。<strong>土日・祝日・夜が本番になる業界が多い</strong></div></div>
+    <div class="vs-row"><div class="lbl">1件の金額</div><div class="a" data-l="法人">数十万〜数億円。件数は少なく、1件が重い</div><div class="b" data-l="個人">数万〜数千万円。件数を積む業界と、1件が大きい業界に分かれる</div></div>
+    <div class="vs-row"><div class="lbl">関係の続き方</div><div class="a" data-l="法人">担当が続く限り、会社対会社の関係が何年も続く</div><div class="b" data-l="個人">買った後は疎遠になりやすい。紹介・再購入をどう作るかが勝負</div></div>
+  </div>
+
+  <div class="vs-cap">対比 3 ｜ どうやってお客様と出会うか</div>
+  <div class="vs three">
+    <div class="vs-row vs-head"><div class="lbl"></div><div class="a">新規開拓</div><div class="b">ルート（既存深耕）</div><div class="c">反響（来店・問い合わせ）</div></div>
+    <div class="vs-row"><div class="lbl">やること</div><div class="a" data-l="新規">飛び込み訪問、テレアポ、メール、紹介依頼</div><div class="b" data-l="ルート">決まった取引先を定期訪問し、注文と課題を拾う</div><div class="c" data-l="反響">来店・資料請求した人に対応し、追いかける</div></div>
+    <div class="vs-row"><div class="lbl">断られる回数</div><div class="a" data-l="新規">非常に多い。100件動いて数件が普通の世界</div><div class="b" data-l="ルート">少ない。関係ができているので話は聞いてもらえる</div><div class="c" data-l="反響">中くらい。相手に興味はあるが、他社とも比較している</div></div>
+    <div class="vs-row"><div class="lbl">きつさの正体</div><div class="a" data-l="新規">断られ続けるメンタル負荷と、行動量のノルマ</div><div class="b" data-l="ルート">担当を引き継ぐので前任と比較される。関係を壊せない緊張感</div><div class="c" data-l="反響">来た人を逃せない。決められないと自分の力不足に見える</div></div>
+    <div class="vs-row"><div class="lbl">多い業界</div><div class="a" data-l="新規">OA機器、人材、広告、IT、保険</div><div class="b" data-l="ルート">食品・日用品メーカー、卸・商社、MR、代理店営業</div><div class="c" data-l="反響">不動産・住宅、自動車ディーラー、Webからの問い合わせ型IT</div></div>
+  </div>
+
+  <div class="vs-cap">対比 4 ｜ 1件が決まるまでの時間（商談サイクル）</div>
+  <div class="vs">
+    <div class="vs-row vs-head"><div class="lbl"></div><div class="a">短期サイクル（数日〜数週間）</div><div class="b">長期サイクル（数ヶ月〜数年）</div></div>
+    <div class="vs-row"><div class="lbl">業界</div><div class="a" data-l="短期">OA機器、人材（求人広告）、保険、清涼飲料ルートセールス</div><div class="b" data-l="長期">IT・SaaS、不動産・住宅、産業機械、医療機器、MR</div></div>
+    <div class="vs-row"><div class="lbl">評価のされ方</div><div class="a" data-l="短期">今月の数字が毎月出る。良くも悪くもリセットが早い</div><div class="b" data-l="長期">半期・通期で見られる。数ヶ月成果ゼロの時期に耐える必要がある</div></div>
+    <div class="vs-row"><div class="lbl">求められる力</div><div class="a" data-l="短期">行動量とスピード。1日に何件会えるかが直結する</div><div class="b" data-l="長期">案件を管理し続ける力。関係者が多く、社内調整の比重が大きい</div></div>
+    <div class="vs-row"><div class="lbl">向いている人</div><div class="a" data-l="短期">結果がすぐ出ないと張り合いがない人</div><div class="b" data-l="長期">大きな仕事にじっくり関わりたい人</div></div>
+  </div>
+
+  <h3>12業界 早見表｜営業の中身はこう変わる</h3>
+  <p class="lead" style="margin-bottom:1rem">
+    志望業界が決まっていない人は、この表で「自分が受け入れられそうな行」を探すところから始めてください。横にスクロールできます。
+  </p>
+  <div class="tablewrap">
+    <table id="gyoTable">
+      <thead>
+        <tr>
+          <th>業界</th><th>何を売る</th><th>誰に売る</th><th>出会い方</th>
+          <th>決まるまで</th><th>数字の見られ方</th><th>この業界ならではの特徴</th>
+        </tr>
+      </thead>
+      <tbody id="gyoBody"></tbody>
+    </table>
+  </div>
+  <p class="note">※ 同じ業界でも、会社の規模・扱う商材・大手か中小かで実態は変わります。この表は「面接で何を質問すべきか」を考えるための出発点として使ってください。</p>
+</section>
+
+<!-- ============ 職種図鑑 ============ -->
+<section id="zukan">
+  <h2><span class="num">ZUKAN</span>職種図鑑｜10業界の営業</h2>
+  <p class="lead">
+    カードをクリックすると、商材プロフィール・仕事の中身・1日の流れ・使うツール・向き不向き・キャリア・<strong>紹介動画</strong>が開きます。
+    動画は厚生労働省の職業情報提供サイト（job tag）公式の職業紹介動画です。
+  </p>
+  <div class="filters" id="filters"></div>
+  <div class="jobs-list" id="jobsList"></div>
+</section>
+
+<!-- ============ 仕事の流れ ============ -->
+<section id="process">
+  <h2><span class="num">FLOW</span>営業の仕事の流れ｜共通する6ステップ</h2>
+  <p class="lead">
+    業界が違っても、営業の仕事はこの6ステップの繰り返しです。<strong>「業界で変わるところ」を合わせて読むと、違いがどこから生まれるかが見えます。</strong>
+  </p>
+  <div class="proc">
+    <div class="pcard">
+      <div class="st">STEP 1</div>
+      <h4>見込み客を見つける</h4>
+      <p>誰に会えば売れる可能性があるかを探す段階。リスト作成、テレアポ、飛び込み、展示会、紹介、Webからの問い合わせなど手段はさまざまです。</p>
+      <div class="dif"><b>業界で変わる：</b>ITや広告では専門チーム（マーケ・インサイドセールス）が担当し、営業は商談から参加することが増えています。OA機器や人材では、ここを営業本人がやります。</div>
+    </div>
+    <div class="pcard">
+      <div class="st">STEP 2</div>
+      <h4>アポイントを取る</h4>
+      <p>会う約束を取り付ける段階。ここで断られる回数が最も多く、新規開拓型の営業では1日の時間の多くをここに使います。</p>
+      <div class="dif"><b>業界で変わる：</b>ルート営業・MR・代理店営業では、訪問先がすでに決まっているためこの負荷はほとんどありません。不動産・自動車は来店した人が相手なので、アポではなく「来た人を逃さない」勝負になります。</div>
+    </div>
+    <div class="pcard">
+      <div class="st">STEP 3</div>
+      <h4>ヒアリング（課題を聞く）</h4>
+      <p>いきなり商品を説明せず、相手の状況・困っていること・予算・決め方を聞く段階。<strong>営業の実力差が最も出るのがここ</strong>です。</p>
+      <div class="dif"><b>業界で変わる：</b>法人営業では「社内で誰が決めるのか」まで聞き出す必要があります。個人営業では、家族構成やライフプランなど生活そのものを聞くことになります。</div>
+    </div>
+    <div class="pcard">
+      <div class="st">STEP 4</div>
+      <h4>提案・見積もり</h4>
+      <p>聞いた内容に合わせて、商品・構成・価格を組み立てて提示する段階。社内の技術者・企画・上司を巻き込むことも多くあります。</p>
+      <div class="dif"><b>業界で変わる：</b>広告・IT・コンサルでは提案書そのものが商品になり、作成に何日もかけます。ルートセールスでは、その場で口頭提案して即決という進み方が普通です。</div>
+    </div>
+    <div class="pcard">
+      <div class="st">STEP 5</div>
+      <h4>クロージング（受注）</h4>
+      <p>迷っている点を一つずつ解消し、契約の意思決定を後押しする段階。値引き交渉、納期調整、契約書の手続きが発生します。</p>
+      <div class="dif"><b>業界で変わる：</b>法人は稟議に数週間〜数ヶ月。個人向けの不動産・保険では「その日のうちに決めてもらう」場面もあり、押し方の是非が問われます。会社の姿勢を面接で確認しましょう。</div>
+    </div>
+    <div class="pcard">
+      <div class="st">STEP 6</div>
+      <h4>納品後のフォロー・深耕</h4>
+      <p>納品・導入後に問題がないか確認し、次の取引や紹介につなげる段階。ここを丁寧にやる人が、数年後に安定して数字を出します。</p>
+      <div class="dif"><b>業界で変わる：</b>SaaSでは「継続してもらう」ことが売上そのもの（カスタマーサクセス）。自動車ディーラーでは車検・保険・乗り換えで一生続きます。単発で終わる商材ほど、新規開拓を回し続ける必要があります。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 営業のリアル ============ -->
+<section id="real">
+  <h2><span class="num">REAL</span>営業のリアル｜先に知っておくこと</h2>
+  <p class="lead">
+    求人票の良い面だけでは見えない部分です。<strong>知ったうえで選べば続けられます。</strong>知らずに入ると、早期離職の原因になります。
+  </p>
+  <div class="realgrid">
+    <div class="realcard">
+      <h4>目標（ノルマ・予算）は、どの業界にもある</h4>
+      <p>「うちはノルマがない」と言う会社でも、目標や予算という名前で数字は必ずあります。問題は有無ではなく、<strong>未達のときにどう扱われるか</strong>です。詰められる会社と、一緒に原因を分析する会社があります。</p>
+      <div class="tip"><b>確認する問い：</b>目標はどう決まりますか？ 達成できなかった月は、どんな面談がありますか？</div>
+    </div>
+    <div class="realcard">
+      <h4>断られるのが前提の仕事だと理解する</h4>
+      <p>新規開拓では、断られる回数のほうが圧倒的に多いのが普通です。落ち込むかどうかではなく、<strong>断られた理由を次に活かせるか</strong>で差がつきます。人格を否定されたわけではない、と切り分ける習慣が必要です。</p>
+      <div class="tip"><b>確認する問い：</b>新規開拓の比率はどれくらいですか？ 一日の訪問件数の目安はありますか？</div>
+    </div>
+    <div class="realcard">
+      <h4>給与の作られ方が業界で大きく違う</h4>
+      <p>固定給が中心の業界（メーカー・MR・インフラ）と、インセンティブ比率が高い業界（保険・不動産・人材）があります。後者は成果次第で若いうちから高収入も可能ですが、<strong>成果が出ない月の生活も自分で背負います。</strong></p>
+      <div class="tip"><b>確認する問い：</b>固定給とインセンティブの比率は？ 固定残業代は何時間分含まれていますか？</div>
+    </div>
+    <div class="realcard">
+      <h4>移動時間が長い。社用車と直行直帰</h4>
+      <p>担当エリアが広い業界では、一日の半分近くが移動ということもあります。運転が業務になる会社も多く、<strong>普通自動車免許が実質必須</strong>の求人は珍しくありません。直行直帰は自由でもあり、自己管理が要るということでもあります。</p>
+      <div class="tip"><b>確認する問い：</b>担当エリアはどの範囲ですか？ 社用車ですか、公共交通ですか？</div>
+    </div>
+    <div class="realcard">
+      <h4>予定は自分では決められない</h4>
+      <p>お客様の都合が最優先なので、急な呼び出しや変更が起こります。個人向けの業界では土日・夜が本番。法人向けは平日日中が中心ですが、決算期や納期前は集中します。</p>
+      <div class="tip"><b>確認する問い：</b>土日の対応はありますか？ 一番忙しい時期はいつで、そのときの働き方は？</div>
+    </div>
+    <div class="realcard">
+      <h4>「口がうまい人の仕事」ではない</h4>
+      <p>実際に成果を出しているのは、話し上手な人より<strong>準備が丁寧で、聞くのが上手で、約束を守る人</strong>です。人見知りでも活躍している営業は珍しくありません。逆に、報告・入力・見積作成といった地味な事務作業は想像以上にあります。</p>
+      <div class="tip"><b>確認する問い：</b>SFA・CRMなどの入力業務はどれくらいの時間を占めますか？</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ キャリア ============ -->
+<section id="career">
+  <h2><span class="num">NEXT</span>キャリアの伸びしろ｜営業のその先</h2>
+  <p class="lead">
+    営業は<strong>「その後の選択肢が最も広い職種」</strong>のひとつです。顧客と数字の両方に触れているため、社内のほとんどの部署に移る道があります。
+  </p>
+  <div class="ladder">
+    <div class="step">
+      <div class="yr">1〜2年目</div>
+      <h4>担当営業（見習い）</h4>
+      <p>先輩に同行しながら商品と業界を覚える時期。小さな既存顧客を任され、まずは「約束を守る」「報告する」を身につける。</p>
+    </div>
+    <div class="step">
+      <div class="yr">3〜5年目</div>
+      <h4>一人で回す営業</h4>
+      <p>自分のエリア・顧客を持ち、数字の責任を負う。提案の型ができ、後輩の同行指導も始まる。転職市場での価値が最も上がり始める時期。</p>
+    </div>
+    <div class="step">
+      <div class="yr">5〜8年目</div>
+      <h4>主任・チームリーダー</h4>
+      <p>大口顧客や重要案件を担当しつつ、数名のチームの数字を見る立場へ。自分が売るから、<strong>チームで売れるようにする</strong>へ役割が変わる。</p>
+    </div>
+    <div class="step">
+      <div class="yr">8年目〜</div>
+      <h4>営業所長・マネージャー</h4>
+      <p>拠点や部門の予算を預かる。採用・育成・戦略まで担当し、経営に近い視点が求められる。ここから本社機能へ進む道も開ける。</p>
+    </div>
+  </div>
+
+  <h3>営業経験が、そのまま武器になる次の仕事</h3>
+  <div class="branch">
+    <div class="brcard">
+      <h4>営業企画・セールスイネーブルメント</h4>
+      <p>売れる仕組みを作る側へ。目標設計、資料整備、研修、データ分析。<strong>現場で何が起きているかを知っている人にしかできない</strong>ため、営業出身者が中心。</p>
+    </div>
+    <div class="brcard">
+      <h4>マーケティング</h4>
+      <p>個別の商談ではなく、市場全体に働きかける仕事。「顧客が何に困り、どの言葉で反応したか」を体で知っていることが強みになる。</p>
+    </div>
+    <div class="brcard">
+      <h4>カスタマーサクセス（IT・SaaS）</h4>
+      <p>契約後のお客様に使いこなしてもらい、継続してもらう職種。近年急速に増えており、営業経験者の代表的な転身先のひとつ。</p>
+    </div>
+    <div class="brcard">
+      <h4>商品企画・購買</h4>
+      <p>「売れない理由」を最前線で聞いてきた経験を、商品そのものの改善に活かす。メーカー・小売で実例が多い。</p>
+    </div>
+    <div class="brcard">
+      <h4>人事（採用）・教育</h4>
+      <p>採用は、自社を売る営業とほぼ同じ構造の仕事。説明会での話し方、動機づけ、面談の進め方がそのまま活きる。</p>
+    </div>
+    <div class="brcard">
+      <h4>他業界の営業へ転職／独立</h4>
+      <p>営業は業界を越えて求人がある職種。無形商材の法人営業を経験しておくと、選択肢がさらに広がる。顧客と数字を掴んでいる人は、独立も現実的な道になる。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 共通スキル ============ -->
+<section id="skills">
+  <h2><span class="num">SKILL</span>どの営業にも共通する6つの力</h2>
+  <p class="lead">
+    業界が違っても、評価される力はかなり共通しています。ここは<strong>面接で語れる自分の強み</strong>に直結する部分です。
+  </p>
+  <div class="skillgrid">
+    <div class="skillcard">
+      <div class="ic">👂</div>
+      <h4>聞く力（ヒアリング）</h4>
+      <p>話す力より先に評価されるのがこれ。お客様は自分の課題を言葉にできていないことが多く、質問しながら一緒に整理できる人が信頼されます。</p>
+      <div class="ex">語れる経験例：バイトや部活で、相手の要望を聞いて代案を出した場面</div>
+    </div>
+    <div class="skillcard">
+      <div class="ic">🧩</div>
+      <h4>課題を言い換える力</h4>
+      <p>「安くしてほしい」の裏にある本当の理由（予算の締切、社内の反対、他社との比較）を掴んで、別の解決策に置き換えられるかどうかが提案の質を決めます。</p>
+      <div class="ex">語れる経験例：問題の原因を自分なりに分析して、やり方を変えた経験</div>
+    </div>
+    <div class="skillcard">
+      <div class="ic">🗓️</div>
+      <h4>段取り・案件管理</h4>
+      <p>営業は常に複数の商談を同時に抱えます。<strong>どの案件が今どの段階にあり、次に何をすべきか</strong>を自分で管理できないと、忘れられた案件から失注していきます。</p>
+      <div class="ex">語れる経験例：試験・バイト・行事を並行してこなしたときの管理方法</div>
+    </div>
+    <div class="skillcard">
+      <div class="ic">📊</div>
+      <h4>数字を読む・使う力</h4>
+      <p>目標に対する進捗、受注率、単価、訪問件数。<strong>「なぜ達成できなかったか」を数字で説明できる人</strong>が早くリーダーになります。Excelは実務で必ず使います。</p>
+      <div class="ex">目安：Excelで表とグラフ、簿記3級。提案に数字を入れられると強い</div>
+    </div>
+    <div class="skillcard">
+      <div class="ic">📚</div>
+      <h4>商材と業界の知識</h4>
+      <p>お客様は、自分より詳しくない人からは買いません。商品知識に加えて、<strong>お客様の業界の常識</strong>まで知っていると、話す内容が一段変わります。学び続ける姿勢が前提の仕事です。</p>
+      <div class="ex">語れる経験例：自分から調べて詳しくなった分野と、その調べ方</div>
+    </div>
+    <div class="skillcard">
+      <div class="ic">🔄</div>
+      <h4>切り替える力・続ける力</h4>
+      <p>断られる、失注する、目標に届かない月がある。そこで止まらず次に向かえるかが、この仕事を続けられるかを分けます。落ち込まない人ではなく、<strong>回復の仕方を持っている人</strong>が強い。</p>
+      <div class="ex">語れる経験例：うまくいかなかった経験から、次にどう変えたか</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 比較表 ============ -->
+<section id="hikaku">
+  <h2><span class="num">HIKAKU</span>10業界の営業をひと目で比較</h2>
+  <p class="lead">
+    ●が多いほどその要素が強いという目安です（会社の規模や方針で変わります）。横にスクロールできます。
+  </p>
+  <div class="tablewrap">
+    <table id="cmpTable">
+      <thead>
+        <tr>
+          <th>職種</th><th>新規開拓の比率</th><th>1件の商談の長さ</th><th>数字（目標）の重さ</th>
+          <th>専門知識の必要度</th><th>個人プレー度</th><th>主な取引相手</th><th>代表的な資格</th>
+        </tr>
+      </thead>
+      <tbody id="cmpBody"></tbody>
+    </table>
+  </div>
+  <p class="note">「個人プレー度」＝ 成果が個人の数字で測られる度合い。低いほどチームや他部署と一緒に受注をつくる仕事です。</p>
+</section>
+
+<!-- ============ 診断 ============ -->
+<section id="shindan">
+  <h2><span class="num">CHECK</span>かんたん適性診断</h2>
+  <p class="lead">
+    5つの質問に答えると、相性が良さそうな営業を3つ表示します。<strong>答えを決めるものではなく、調べる方向を絞る道具</strong>として使ってください。
+  </p>
+  <div class="quiz">
+    <div id="quizBody"></div>
+    <div class="quiz-actions">
+      <button class="btn" id="calcBtn">結果を見る</button>
+      <button class="btn ghost" id="resetBtn">やり直す</button>
+    </div>
+    <div id="result"></div>
+  </div>
+</section>
+
+<!-- ============ 選び方の軸 ============ -->
+<section id="erabikata">
+  <h2><span class="num">AXIS</span>企業・業界を選ぶ6つの軸</h2>
+  <p class="lead">
+    営業職は求人数が多いぶん、選び方を持っていないと「受かったところ」で決めることになります。この6つで比べれば、志望動機は会社ごとに変わります。
+  </p>
+
+  <div class="axis">
+    <h4><b>軸1</b>何を売る会社か（商材）</h4>
+    <p>自分が「良いと思えないもの」を売り続けるのは想像以上に苦しい仕事です。逆に、商材に納得できていれば断られても折れにくくなります。有形か無形か、日常的なものか一生に一度のものか、まずここを決めてください。</p>
+    <div class="ask">自問：友人に自信を持って勧められる商品か？ その理由を3つ言えるか？</div>
+  </div>
+
+  <div class="axis">
+    <h4><b>軸2</b>誰に売る仕事か（法人／個人）</h4>
+    <p>法人営業は組織を相手に理詰めで進め、平日中心で働きます。個人営業は人の人生に向き合い、土日・夜が動く業界が多くなります。<strong>どちらが優れているかではなく、生活のリズムが変わる</strong>という話です。</p>
+    <div class="ask">自問：友人と休みを合わせたい？ 平日休みでも構わない？</div>
+  </div>
+
+  <div class="axis">
+    <h4><b>軸3</b>新規開拓の比率</h4>
+    <p>「営業がきつい」と言われる要因の多くはここです。新規中心は行動量と精神的なタフさが要りますが、力がつくのも早い。ルート中心は関係づくりが中心で穏やかですが、既存を守る責任と前任との比較があります。</p>
+    <div class="ask">確認する問い：新規と既存の比率は何対何ですか？ 新規のリストは会社が用意しますか？</div>
+  </div>
+
+  <div class="axis">
+    <h4><b>軸4</b>給与の作られ方（固定給とインセンティブ）</h4>
+    <p>同じ「月給25万円」でも、固定残業代40時間分を含む場合と含まない場合では実態が違います。インセンティブ比率が高い会社は、成果が出る人には有利ですが、変動を受け入れられるかを考える必要があります。</p>
+    <div class="ask">確認する問い：モデル年収の内訳を教えてください。入社3年目の平均はどれくらいですか？</div>
+  </div>
+
+  <div class="axis">
+    <h4><b>軸5</b>教育体制と、一人立ちまでの期間</h4>
+    <p>研修とOJTが整っている会社と、入社2ヶ月でリストを渡されて「行ってこい」の会社があります。新卒であれば<strong>最初の1年をどう育ててもらえるか</strong>がその後を大きく左右します。同行の頻度と、教育担当の有無は必ず聞いてください。</p>
+    <div class="ask">確認する問い：一人で訪問するまで何ヶ月ありますか？ 先輩の同行はどのくらいの頻度ですか？</div>
+  </div>
+
+  <div class="axis">
+    <h4><b>軸6</b>その商材と売り方は、これから伸びるか</h4>
+    <p>問い合わせ獲得やリスト作成、単純な説明はデジタル化・AI化が進んでいます。一方で<strong>相手の状況に合わせて課題を整理し、社内外を調整して合意をつくる仕事</strong>は残ります。「足で稼ぐだけ」の会社か、提案まで任される会社かを見極めてください。</p>
+    <div class="ask">確認する問い：SFA・CRMやオンライン商談はどの程度導入されていますか？ 営業からの提案は通りますか？</div>
+  </div>
+</section>
+
+<!-- ============ 求人票チェック ============ -->
+<section id="check">
+  <h2><span class="num">LIST</span>求人票で必ず見るチェックリスト</h2>
+  <p class="lead">応募前・面接前にこの10項目を確認しましょう。埋まらない項目が、そのまま質問すべきことになります。</p>
+  <div class="checklist">
+    <label><input type="checkbox"><span>「営業」の中身が具体的に書かれているか<span class="sub">扱う商材、顧客（法人／個人）、新規かルートかが書かれていない求人は必ず質問する</span></span></label>
+    <label><input type="checkbox"><span>担当エリアと、1人あたりの担当顧客数<span class="sub">移動時間と訪問頻度が想像できる。エリアが広いほど車移動が長い</span></span></label>
+    <label><input type="checkbox"><span>目標（ノルマ）の決め方と、未達時の扱い<span class="sub">「ノルマなし」という記載こそ、実際の運用を確認する</span></span></label>
+    <label><input type="checkbox"><span>給与の内訳（固定給・インセンティブ・固定残業代）<span class="sub">「月給◯万円（固定残業◯時間分を含む）」の表記を見落とさない</span></span></label>
+    <label><input type="checkbox"><span>入社後の研修期間と、一人立ちまでの流れ<span class="sub">同行の頻度、ロープレの有無、教育担当がつくかどうか</span></span></label>
+    <label><input type="checkbox"><span>普通自動車免許の要否と、社用車の有無<span class="sub">免許が必須の業界は多い。入社までに取得が必要かも確認</span></span></label>
+    <label><input type="checkbox"><span>土日・夜間の対応があるか<span class="sub">個人向け営業（不動産・保険・自動車）では特に重要</span></span></label>
+    <label><input type="checkbox"><span>転勤・異動の範囲<span class="sub">全国転勤／エリア限定／拠点固定で、生活設計がまったく変わる</span></span></label>
+    <label><input type="checkbox"><span>若手の在籍状況と離職率<span class="sub">3年前に入った新卒が今何人残っているかは、面接で聞いてよい</span></span></label>
+    <label><input type="checkbox"><span>その会社の商品を、自分の言葉で説明できるか<span class="sub">説明できないものは売れない。志望動機の核にもなる</span></span></label>
+  </div>
+</section>
+
+<footer>
+  <h4>参考・出典</h4>
+  <ul>
+    <li>厚生労働省 職業情報提供サイト（日本版O-NET）「job tag」 <a href="https://shigoto.mhlw.go.jp/" target="_blank" rel="noopener">https://shigoto.mhlw.go.jp/</a></li>
+    <li>厚生労働省 職業情報提供サイト「営業の仕事」 <a href="https://shigoto.mhlw.go.jp/User/SaleOccupations" target="_blank" rel="noopener">https://shigoto.mhlw.go.jp/User/SaleOccupations</a></li>
+    <li>厚生労働省公式YouTubeチャンネル 職業紹介動画（事務・営業販売・サービス系プレイリスト） <a href="https://www.youtube.com/playlist?list=PLMG33RKISnWgIokWgBFwUxRs_966FZyef" target="_blank" rel="noopener">プレイリストを見る</a></li>
+    <li>各職種の業務内容・1日の流れ・業界比較は、job tag の職業解説および一般的な実務例をもとに教材用に再構成したものです。実際の業務・勤務条件・給与体系は企業によって大きく異なります。</li>
+  </ul>
+  <p>本ページは学生のキャリア教育用教材です。動画は各配信者の権利物であり、YouTube の埋め込み機能により表示しています。</p>
+</footer>
+
+</div>
+
+<script>
+/* ========== 業界早見表データ ========== */
+const GYOKAI = [
+  {
+    name:"食品・日用品メーカー", type:"yu",
+    what:"自社で作った商品（有形）",
+    who:"卸・スーパー・コンビニ本部などの法人",
+    how:"既存ルート中心。担当チェーンを定期訪問",
+    span:"数週間〜数ヶ月（棚の入れ替え時期に合わせる）",
+    kpi:"担当エリア・担当チェーンの売上と、棚のシェア",
+    feat:"交渉相手は小売の「バイヤー」。売って終わりではなく、店頭の陳列や販促まで一緒に考える。生活に身近な商品を扱える安心感がある。"
+  },
+  {
+    name:"商社・卸売", type:"yu",
+    what:"他社の商品を仕入れて売る（有形）",
+    who:"メーカー・工場・小売など幅広い法人",
+    how:"既存取引先の深耕＋新規開拓",
+    span:"数週間〜数年（大型案件ほど長い）",
+    kpi:"取扱高と粗利（いくら売ったか＋いくら残したか）",
+    feat:"自社製品を持たないぶん、調達力・納期調整・在庫・与信管理といった「間に立つ力」が価値になる。扱う商材が変わる可能性がある。"
+  },
+  {
+    name:"IT・通信（SaaS・システム）", type:"mu",
+    what:"ソフト・仕組み・回線（無形）",
+    who:"企業の情報システム部門・現場部門・経営層",
+    how:"マーケ／インサイドセールスからの引き継ぎ＋新規",
+    span:"3ヶ月〜1年（大型は複数年）",
+    kpi:"新規受注額と、契約の継続率（解約率）",
+    feat:"分業が最も進んでいる業界。売って終わりではなく、使ってもらって初めて成果になる。IT知識は入社後に学ぶ前提の会社が多い。"
+  },
+  {
+    name:"広告・メディア", type:"mu",
+    what:"広告枠・企画・効果（無形）",
+    who:"広告主企業・広告代理店",
+    how:"新規提案＋既存クライアントの継続提案",
+    span:"数週間〜数ヶ月。決まれば繰り返し発注も",
+    kpi:"売上と、クライアントの継続率",
+    feat:"提案書と企画力が商品そのもの。効果が数字で出るため、結果の説明責任が重い。制作チームとの社内調整が仕事の大半を占めることも。"
+  },
+  {
+    name:"人材サービス（求人広告・人材紹介）", type:"mu",
+    what:"採用の成功（無形）",
+    who:"採用したい企業＋仕事を探す個人",
+    how:"新規開拓の比率が高い",
+    span:"数日〜数ヶ月",
+    kpi:"決定数・売上（成果報酬型が多い）",
+    feat:"企業と求職者の両方を相手にする二面性がある。人の人生に関わるやりがいと責任が大きく、景気の影響を受けやすい。"
+  },
+  {
+    name:"金融（銀行・証券）", type:"mu",
+    what:"融資・運用・金融商品（無形）",
+    who:"個人の資産保有者・中小企業の経営者",
+    how:"既存顧客への訪問＋紹介",
+    span:"数週間〜数年にわたる関係づくり",
+    kpi:"預かり資産・契約額・手数料収益",
+    feat:"入社直後から資格取得が連続する。規制が厳しく、説明義務と記録の正確さが厳格に問われる。経営者と直接話す機会が早く来る。"
+  },
+  {
+    name:"保険（生命保険・損害保険）", type:"mu",
+    what:"万一への保障（無形）",
+    who:"個人・中小企業の経営者（BtoC中心）",
+    how:"紹介と新規開拓。自分で相手を探す比重が最大",
+    span:"1回〜数回の面談で決まることも多い",
+    kpi:"契約件数・契約高（インセンティブ比率が高い）",
+    feat:"成果が収入に直結しやすい反面、変動も大きい。長期的な人間関係と信頼が資産になる仕事で、既契約者のフォローが次の紹介を生む。"
+  },
+  {
+    name:"不動産・住宅", type:"yu",
+    what:"住宅・土地・投資物件（高額・一点もの）",
+    who:"住宅を買う個人（BtoC）",
+    how:"来店・問い合わせへの反響対応＋追客",
+    span:"3ヶ月〜1年以上",
+    kpi:"契約棟数・契約金額（歩合の比率が高い）",
+    feat:"お客様に合わせて土日祝が勝負日。宅地建物取引士の有無で任される範囲が変わるため、入社後の資格取得がほぼ前提になる。"
+  },
+  {
+    name:"医薬品（MR）", type:"mu",
+    what:"薬の情報（薬そのものは卸が販売する）",
+    who:"病院・クリニックの医師・薬剤師",
+    how:"担当医療機関への定期訪問",
+    span:"長期。処方が定着するまで年単位",
+    kpi:"担当エリアの処方実績（売上）",
+    feat:"「売り込む」行為が規制で制限された特殊な営業。MR認定試験など専門知識が前提で、医師の空き時間に合わせるため待機も多い。"
+  },
+  {
+    name:"建設・設備・産業機械", type:"yu",
+    what:"大型設備・受注生産品（有形）",
+    who:"工場・ゼネコン・自治体などの法人",
+    how:"既存取引＋指名・入札",
+    span:"半年〜数年",
+    kpi:"受注額と粗利",
+    feat:"技術者と組んで動くため、図面や仕様を理解する姿勢が必要。文系出身者も多いが、入社後の技術習得は避けられない。1件が非常に大きい。"
+  },
+  {
+    name:"自動車ディーラー", type:"yu",
+    what:"自動車（高額・買い替えがある有形）",
+    who:"来店した個人＋法人（社用車）",
+    how:"来店反響＋既存オーナーへの案内",
+    span:"数週間〜数ヶ月",
+    kpi:"販売台数、保険・点検などの付帯商品",
+    feat:"売った後も車検・保険・乗り換えで担当が続く。既存顧客の管理が成績を安定させるため、顧客リストが自分の財産になる。"
+  },
+  {
+    name:"医療機器", type:"yu",
+    what:"検査機器・手術用機器など（専門性が高い有形）",
+    who:"病院・クリニック（法人）",
+    how:"既存施設への訪問＋新規導入提案",
+    span:"数ヶ月〜数年",
+    kpi:"担当施設の売上",
+    feat:"手術や検査への立ち会いがあり、拘束時間が読みにくい。医学・機器の専門知識の比重が大きく、覚えることが多い分だけ代えがきかない。"
+  }
+];
+
+/* ========== 職種図鑑データ ========== */
+const JOBS = [
+  {
+    id:"maker", icon:"🍱", name:"食品メーカー営業",
+    catch:"スーパーの棚を取りに行く。身近な商品を、売場ごと動かす仕事",
+    tags:["法人向け","有形商材","ルート中心"],
+    cats:["all","btob","yukei","route"],
+    spec:{shozai:"有形（自社の食品）", kokyaku:"卸・小売チェーン（法人）", deai:"ルート＋提案", cycle:"数週間〜数ヶ月"},
+    who:"卸売業者、スーパー・コンビニのバイヤー、店舗",
+    duties:[
+      "担当する卸・小売チェーンへの定期訪問と商談",
+      "新商品の提案、採用（棚に置いてもらうこと）の交渉",
+      "販促企画の提案（チラシ掲載、試食、店頭POP）",
+      "受注状況・在庫・出荷の確認、物流部門との調整",
+      "店舗をまわり、陳列状況と競合商品の動きを確認",
+      "売上データの集計と、社内向けの報告資料作成"
+    ],
+    day:[
+      ["8:30","出社またはメール確認。前日の受注・出荷状況をチェック"],
+      ["9:30","担当チェーンの本部へ訪問。新商品の採用提案と価格交渉"],
+      ["11:30","移動しながら次の商談資料を確認"],
+      ["13:00","担当エリアの店舗を巡回。陳列と競合の動きを確認、店長に挨拶"],
+      ["15:00","卸売業者を訪問。販促キャンペーンの打ち合わせ"],
+      ["16:30","帰社。受注入力、社内の物流・企画部門と調整"],
+      ["17:30","日報・商談記録の入力、翌日の提案資料を作成"],
+      ["18:30","退勤（棚替えの時期や決算期は繁忙）"]
+    ],
+    tools:["Excel（売上分析）","PowerPoint（提案資料）","販売管理システム","POSデータ分析ツール","社用車"],
+    good:["身近な商品を扱いたい","データを見ながら提案を組み立てるのが好き","同じ相手と長い関係を築きたい"],
+    hard:["価格交渉が厳しく、値下げ圧力を受けやすい","天候や流行で売れ行きが変わり、自分の努力以外の要因が大きい","担当を引き継ぐため、前任との比較を受けることがある"],
+    quals:["普通自動車免許（ほぼ必須）","日商簿記3級","販売士（リテールマーケティング）","食品表示検定"],
+    path:["担当営業","大手チェーン担当・主力エリア担当","営業所長／量販店担当チーム","商品企画・マーケティング・営業企画へ"],
+    videos:[
+      {id:"eBYg6oHQmO0", title:"食品営業（食品メーカー）（job tag 職業紹介動画）", src:"厚生労働省", point:"「商品を売る」だけでなく、売場づくりや販促まで提案していることに注目。相手が消費者ではなく小売の担当者である点を確認しよう。"}
+    ]
+  },
+  {
+    id:"route", icon:"🚚", name:"ルートセールス（清涼飲料・日用品）",
+    catch:"決まった取引先を回り、売場と在庫を毎週整えていく",
+    tags:["法人向け","有形商材","新規開拓が少ない"],
+    cats:["all","btob","yukei","route"],
+    spec:{shozai:"有形（飲料・日用品）", kokyaku:"小売店・自販機オーナー", deai:"完全ルート", cycle:"即日〜数週間"},
+    who:"スーパー・コンビニ・自販機の設置先など、決まった取引先",
+    duties:[
+      "担当ルートの取引先を決まった曜日・順番で訪問する",
+      "在庫の確認と補充、次回分の受注",
+      "自販機のロケーション管理、商品構成の提案",
+      "売場の陳列調整、POPの設置、新商品の案内",
+      "クレーム・不具合の一次対応",
+      "訪問記録・受注データの入力"
+    ],
+    day:[
+      ["8:00","出社。当日のルートと配送分を確認、車に積み込み"],
+      ["8:45","1軒目に訪問。在庫確認・補充・受注"],
+      ["10:30","自販機のロケーションを巡回、売れ筋を見て商品構成を変更"],
+      ["12:00","昼休憩（移動中に取ることも）"],
+      ["13:00","午後のルートを巡回。新商品の案内と陳列変更"],
+      ["16:00","新規で置いてもらえそうな店舗に飛び込みで挨拶"],
+      ["17:00","帰社。受注データ入力、翌日の準備"],
+      ["17:45","退勤（担当ルートによって時間は前後）"]
+    ],
+    tools:["ハンディターミナル","タブレット受注端末","社用車（軽トラ・バン）","Excel","販売管理システム"],
+    good:["同じ人と顔なじみになるのが楽しい","体を動かしながら働きたい","毎日の予定が読める働き方が合っている"],
+    hard:["商品の積み下ろしなど体力を使う場面がある","天候に関係なく外を回る","同じ作業の繰り返しに感じられる時期がある"],
+    quals:["普通自動車免許（必須）","販売士3級","中型免許（あると有利な会社も）"],
+    path:["ルート担当","主要ルート・大口取引先を担当","チェーン本部担当（量販営業）へ","スーパーバイザー・営業所長"],
+    videos:[
+      {id:"pWMqO9BAcCY", title:"清涼飲料ルートセールス（job tag 職業紹介動画）", src:"厚生労働省", point:"新規開拓がほとんどない営業の姿を確認しよう。「売る」よりも「売場を整える」時間が長いことに注目。"}
+    ]
+  },
+  {
+    id:"oa", icon:"🖨️", name:"OA機器・オフィス機器営業",
+    catch:"飛び込みとテレアポで、中小企業のオフィスを一件ずつ開拓する",
+    tags:["法人向け","有形商材","新規開拓が中心"],
+    cats:["all","btob","yukei","shinki"],
+    spec:{shozai:"有形（複合機・PC・通信機器）", kokyaku:"中小企業（法人）", deai:"新規開拓（飛び込み・テレアポ）", cycle:"数日〜数週間"},
+    who:"中小企業の総務・経営者",
+    duties:[
+      "担当エリアの企業へ飛び込み訪問、テレアポでのアポイント獲得",
+      "現在使っている機器・契約内容のヒアリング",
+      "機器の入れ替え提案、リース料を含めた見積の作成",
+      "デモンストレーション、導入日程の調整",
+      "契約手続き、リース会社との書類のやりとり",
+      "導入後の保守対応・追加提案"
+    ],
+    day:[
+      ["8:30","朝礼。前日の実績と当日の行動目標を共有"],
+      ["9:00","テレアポ。担当エリアのリストに電話をかける"],
+      ["10:30","エリアに出て飛び込み訪問（1日20〜30件のことも）"],
+      ["12:00","昼休憩"],
+      ["13:00","アポイント先で商談。現状のヒアリングと提案"],
+      ["15:00","見積作成、リース会社への与信確認"],
+      ["16:30","2件目の商談。クロージング"],
+      ["18:00","帰社。日報入力、翌日のアポ確認"],
+      ["19:00","退勤（月末は追い込みで遅くなりやすい）"]
+    ],
+    tools:["電話・リスト管理","SFA／CRM","Excel（見積・リース計算）","タブレット（デモ）","社用車・自転車"],
+    good:["行動量で結果を出したい","短いスパンで成果が見えるほうが張り合いがある","断られても引きずらない"],
+    hard:["断られる回数が非常に多く、精神的な負荷が大きい","行動件数そのものが目標になっている会社がある","目標が月単位で、常にリセットされ続ける"],
+    quals:["普通自動車免許","ITパスポート（歓迎）","特別な資格より行動実績が評価される"],
+    path:["新規開拓担当","大口顧客・既存顧客の担当も持つ","チームリーダー・課長","IT商材や他業界の法人営業へ転職する人も多い"],
+    videos:[
+      {id:"3uB3r0lBnLA", title:"OA機器営業（job tag 職業紹介動画）", src:"厚生労働省", point:"新規開拓型の営業の典型。1日の中でテレアポと訪問がどれくらいの割合を占めるか数えながら見よう。"}
+    ]
+  },
+  {
+    id:"it", icon:"💻", name:"IT・SaaS営業",
+    catch:"形のない仕組みを売る。分業されたチームで受注をつくる",
+    tags:["法人向け","無形商材","分業型"],
+    cats:["all","btob","mukei","shinki"],
+    spec:{shozai:"無形（システム・クラウドサービス）", kokyaku:"企業の情シス・現場部門・経営層", deai:"問い合わせ＋インサイドセールス", cycle:"3ヶ月〜1年"},
+    who:"導入を検討する企業の担当者・決裁者",
+    duties:[
+      "インサイドセールスから引き継いだ商談への対応",
+      "顧客の業務課題のヒアリング（現状の運用、困りごと、体制）",
+      "自社サービスでどう解決するかの提案とデモ",
+      "見積・稟議資料の作成、社内の技術担当との連携",
+      "契約後の導入計画づくり、カスタマーサクセスへの引き継ぎ",
+      "SFAへの商談記録の入力、案件パイプラインの管理"
+    ],
+    day:[
+      ["9:00","出社／在宅。メールとSFAで担当案件の状況を確認"],
+      ["9:30","チームの朝会。今週決まりそうな案件を共有"],
+      ["10:00","オンライン商談。ヒアリングと課題整理"],
+      ["11:30","提案資料の作成。技術担当に仕様の確認"],
+      ["13:00","客先を訪問し、役員向けにプレゼン"],
+      ["15:30","見積作成、社内の承認申請"],
+      ["16:30","次回商談の準備。顧客の業界と競合を調べる"],
+      ["18:00","SFAに商談内容を入力して退勤"]
+    ],
+    tools:["Salesforce等のSFA/CRM","Zoom・Teams（オンライン商談）","PowerPoint（提案書）","Excel","Slack・Notion"],
+    good:["新しい技術や仕組みを学ぶのが好き","論理的に説明を組み立てるのが得意","チームで大きな案件を追いたい"],
+    hard:["商材が目に見えず、最初の半年は説明そのものが難しい","案件が長く、数ヶ月成果が出ない時期がある","技術・法務・カスタマーサクセスなど社内調整の比重が大きい"],
+    quals:["ITパスポート","基本情報技術者（歓迎）","各種クラウドの認定資格","簿記3級（顧客の業務理解に有効）"],
+    path:["インサイドセールス／若手営業","フィールドセールス（商談担当）","大手企業担当・チームリーダー","カスタマーサクセス・営業企画・マーケティングへ"],
+    videos:[
+      {id:"7Yg0j4oTOUs", title:"営業（IT）（job tag 職業紹介動画）", src:"厚生労働省", point:"「モノがない商材をどう説明しているか」に注目。技術担当と一緒に動く場面がどれくらいあるかも確認しよう。"}
+    ]
+  },
+  {
+    id:"ad", icon:"📣", name:"広告・メディア営業",
+    catch:"企業の「売りたい」を、企画とメディアの形にして届ける",
+    tags:["法人向け","無形商材","企画提案型"],
+    cats:["all","btob","mukei","shinki"],
+    spec:{shozai:"無形（広告枠・企画・効果）", kokyaku:"広告主企業・代理店（法人）", deai:"新規提案＋既存の継続", cycle:"数週間〜数ヶ月"},
+    who:"商品やサービスを広めたい企業の宣伝・販促担当者",
+    duties:[
+      "クライアントの課題・ターゲット・予算のヒアリング",
+      "媒体（Web・SNS・テレビ・雑誌・交通広告）の組み合わせ提案",
+      "企画書・見積の作成、社内の制作チームとの打ち合わせ",
+      "掲載スケジュールの管理、原稿・素材の確認",
+      "掲載後の効果レポート作成と、次回提案",
+      "新規クライアントの開拓（訪問・紹介・問い合わせ対応）"
+    ],
+    day:[
+      ["9:30","出社。メール確認、掲載中の広告の数値をチェック"],
+      ["10:00","クライアントへ訪問。前回キャンペーンの効果報告と次回提案"],
+      ["12:30","昼休憩"],
+      ["13:30","社内で制作チームと打ち合わせ。企画の方向性を共有"],
+      ["15:00","企画書と見積の作成"],
+      ["17:00","新規クライアントへの電話・メールでアプローチ"],
+      ["18:00","入稿締切の確認、原稿チェック"],
+      ["19:00","退勤（入稿前・キャンペーン前は残業が出やすい）"]
+    ],
+    tools:["PowerPoint（企画書）","Excel（効果分析）","広告管理・配信ツール","Googleアナリティクス等の解析ツール","SFA/CRM"],
+    good:["企画を考えるのが好き","トレンドや世の中の動きに関心がある","形になったものが世に出る仕事に憧れがある"],
+    hard:["効果が数字で出るため、結果への説明責任が重い","社内の制作チームとクライアントの板挟みになりやすい","締切が動かせず、入稿前の負荷が集中する"],
+    quals:["Webアナリスト検定","マーケティング・ビジネス実務検定","Google広告等の認定資格","普通自動車免許（地方の媒体社）"],
+    path:["営業アシスタント／担当営業","大手クライアント担当","プランナー・営業リーダー","マーケティング・事業企画・制作ディレクションへ"],
+    videos:[
+      {id:"L2JEMmgf2aQ", title:"広告営業（job tag 職業紹介動画）", src:"厚生労働省", point:"営業が「企画」にどこまで関わっているかに注目。売るものが枠なのか、アイデアなのかを考えながら見よう。"}
+    ]
+  },
+  {
+    id:"hoken", icon:"🛡️", name:"保険営業（生命保険・損害保険）",
+    catch:"人生の「もしも」に備える設計を、一人ひとりに提案する",
+    tags:["個人向け","無形商材","インセンティブが大きい"],
+    cats:["all","btoc","mukei","shinki"],
+    spec:{shozai:"無形（保障）", kokyaku:"個人・中小企業経営者", deai:"紹介＋新規開拓", cycle:"1回〜数回の面談"},
+    who:"保険を検討する個人と、その家族",
+    duties:[
+      "見込み客の開拓（紹介、職域訪問、セミナー、既契約者からの紹介）",
+      "ライフプランのヒアリング（家族構成、収入、将来の希望）",
+      "保障内容の設計と提案、保険料のシミュレーション",
+      "契約手続き、告知内容の確認、必要書類の回収",
+      "既契約者への定期的なフォロー（見直し、住所変更、給付金請求）",
+      "業界の法令・商品知識の継続学習と社内試験"
+    ],
+    day:[
+      ["9:00","出社。朝礼で商品知識の勉強会、当日の面談予定を確認"],
+      ["10:00","既契約者を訪問。保障内容の見直しと近況の確認"],
+      ["12:00","昼休憩"],
+      ["13:00","紹介いただいた方と初回面談。まずは話を聞くことに徹する"],
+      ["15:00","事務所で設計書を作成、保険料をシミュレーション"],
+      ["16:30","2回目の面談。設計内容を説明して申込手続き"],
+      ["18:30","給付金請求の相談に対応。書類の説明"],
+      ["19:30","退勤（お客様の都合で夜・土日の面談も発生する）"]
+    ],
+    tools:["設計書作成システム","タブレット（申込手続き）","顧客管理システム","スマートフォン","Excel"],
+    good:["人の人生の話をじっくり聞ける","成果が収入に反映されるほうがやる気が出る","長い付き合いの中で信頼を積み上げたい"],
+    hard:["見込み客を自分で探す比重が最も大きい","収入の変動が大きく、成果が出ない時期の不安がある","知人・友人に声をかけることに抵抗を感じる人もいる"],
+    quals:["生命保険募集人資格（入社後に取得／必須）","損害保険募集人資格","FP技能士2級・3級","相続診断士"],
+    path:["新人育成期間（固定給が手厚い期間がある）","一人立ちした募集人","トップセールス／営業所のトレーナー","営業所長・支社の管理職、代理店として独立"],
+    videos:[
+      {id:"0A3WL56IedE", title:"保険営業（生命保険、損害保険）（job tag 職業紹介動画）", src:"厚生労働省", point:"商品説明よりも「聞く時間」が長いことに注目。見込み客をどうやって見つけているのかも確認しよう。"}
+    ]
+  },
+  {
+    id:"dairiten", icon:"🤝", name:"代理店営業",
+    catch:"自分では売らない。売ってくれる会社を増やし、育てる",
+    tags:["法人向け","無形商材","間接販売"],
+    cats:["all","btob","mukei","route"],
+    spec:{shozai:"無形／有形（自社商品を代理店経由で）", kokyaku:"販売パートナー（代理店）", deai:"既存代理店の支援＋新規開拓", cycle:"数ヶ月〜継続的"},
+    who:"自社商品を扱ってくれる代理店の経営者・販売担当者",
+    duties:[
+      "担当する代理店への定期訪問、販売状況の確認",
+      "代理店の販売担当者への商品研修・ロールプレイング指導",
+      "販促ツールやキャンペーンの提供、販売計画づくりの支援",
+      "代理店からの問い合わせ・トラブルへの対応",
+      "新しい代理店の開拓と契約手続き",
+      "代理店ごとの実績集計と、社内への報告"
+    ],
+    day:[
+      ["9:00","出社。担当代理店の販売実績を集計・確認"],
+      ["10:00","代理店A社を訪問。今月の進捗と課題をヒアリング"],
+      ["11:30","代理店の若手向けに商品勉強会を実施"],
+      ["13:00","昼休憩"],
+      ["14:00","代理店B社を訪問。販促キャンペーンの案内と目標設定"],
+      ["16:00","新規代理店候補との商談"],
+      ["17:30","帰社。研修資料の作成、実績レポートの入力"],
+      ["18:30","退勤"]
+    ],
+    tools:["Excel（代理店別の実績管理）","PowerPoint（研修資料）","SFA/CRM","社用車","オンライン会議ツール"],
+    good:["人に教えたり育てたりするのが好き","自分が前に出るより、相手を後押しするほうが得意","チームや組織の仕組みづくりに関心がある"],
+    hard:["自分では売れず、代理店が動いてくれないと数字にならない","指示ではなく「お願いする」立場で調整する難しさ","代理店ごとに温度差があり、公平性の配慮が必要"],
+    quals:["普通自動車免許","各業界の募集人資格（保険の場合）","販売士","研修・指導の経験が評価される"],
+    path:["代理店担当","主要代理店・大手代理店の担当","エリアマネージャー","販売企画・代理店戦略・研修部門へ"],
+    videos:[
+      {id:"-I4b957Nz5o", title:"代理店営業（保険会社）（job tag 職業紹介動画）", src:"厚生労働省", point:"「お客様に売る営業」との違いに注目。相手は消費者ではなく、売ってくれるパートナー企業であることを確認しよう。"}
+    ]
+  },
+  {
+    id:"fudosan", icon:"🏠", name:"住宅・不動産営業",
+    catch:"人生で一番高い買い物に、数ヶ月かけて伴走する",
+    tags:["個人向け","有形商材","土日が本番"],
+    cats:["all","btoc","yukei","shinki"],
+    spec:{shozai:"有形（住宅・土地・一点もの）", kokyaku:"住宅を買う個人（BtoC）", deai:"来店・問い合わせへの反響対応", cycle:"3ヶ月〜1年以上"},
+    who:"家を買う個人と、その家族",
+    duties:[
+      "モデルハウス・店舗での接客、資料請求者へのアプローチ",
+      "希望条件・予算・家族構成のヒアリング",
+      "物件の紹介、現地案内、間取りやプランの提案",
+      "資金計画の説明、住宅ローンの相談・金融機関との調整",
+      "重要事項説明、契約手続き、引き渡しまでの各種調整",
+      "設計・工事・金融機関など関係者とのスケジュール管理"
+    ],
+    day:[
+      ["9:30","出社。来場予約と追客中のお客様の状況を確認"],
+      ["10:00","電話・メールでの追客。検討中のお客様に情報提供"],
+      ["11:00","来場されたご家族の接客。希望と予算をヒアリング"],
+      ["13:00","昼休憩"],
+      ["14:00","物件の現地案内。周辺環境も一緒に確認"],
+      ["16:00","資金計画を作成。ローンの試算と返済シミュレーション"],
+      ["17:30","契約予定のお客様と打ち合わせ。重要事項の説明準備"],
+      ["19:30","退勤（土日祝が最も忙しく、平日が休みになる）"]
+    ],
+    tools:["物件管理システム","住宅ローン試算ツール","CAD・間取り作成ソフト","Excel","社用車"],
+    good:["一人のお客様と長く深く向き合いたい","大きな買い物の意思決定を支えることにやりがいを感じる","土日勤務・平日休みでも問題ない"],
+    hard:["土日祝が勝負日で、友人と休みが合いにくい","金額が大きく、決まらない期間が続くと精神的にこたえる","宅地建物取引士の取得が事実上求められ、入社後の勉強が続く"],
+    quals:["宅地建物取引士（重要）","普通自動車免許","FP技能士2級・3級","住宅ローンアドバイザー"],
+    path:["営業担当","主任・チーフ（大型物件を担当）","店長・支店長","仕入れ（用地取得）・商品企画・不動産管理へ"],
+    videos:[
+      {id:"j8DE0andFoY", title:"住宅・不動産営業（job tag 職業紹介動画）", src:"厚生労働省", point:"契約までに何ヶ月もかかること、そして資金計画やローンの説明が仕事の大きな部分であることに注目しよう。"}
+    ]
+  },
+  {
+    id:"dealer", icon:"🚗", name:"自動車ディーラー営業",
+    catch:"来店したお客様に売り、車検・乗り換えまで一生付き合う",
+    tags:["個人向け","有形商材","反響＋既存フォロー"],
+    cats:["all","btoc","yukei","route"],
+    spec:{shozai:"有形（自動車・付帯商品）", kokyaku:"来店した個人＋法人", deai:"来店反響＋既存オーナーへの案内", cycle:"数週間〜数ヶ月"},
+    who:"車を買う・乗り換える個人と、社用車を持つ法人",
+    duties:[
+      "来店したお客様の接客、希望車種・用途・予算のヒアリング",
+      "試乗の案内、グレードやオプションの提案、見積作成",
+      "下取り車の査定、支払い方法（ローン・残価設定）の説明",
+      "契約手続き、登録・納車の手配",
+      "既存オーナーへの車検・点検・保険更新の案内",
+      "イベント・展示会の企画、店頭での集客活動"
+    ],
+    day:[
+      ["9:30","出社。朝礼で当日の来店予約と目標を確認、展示車の清掃"],
+      ["10:00","来店客の接客。試乗の案内と見積提示"],
+      ["12:00","交代で昼休憩"],
+      ["13:00","既存オーナーへ電話。車検・点検の案内と乗り換えの提案"],
+      ["14:30","納車の準備と、お客様への引き渡し"],
+      ["16:00","下取り車の査定、ローン審査の申請"],
+      ["17:30","商談記録の入力、翌日の準備"],
+      ["19:00","退勤（土日祝が繁忙。平日が休み）"]
+    ],
+    tools:["顧客管理システム","見積・登録システム","査定システム","タブレット","Excel"],
+    good:["車が好きで、知識を身につけるのが楽しい","来店したお客様に丁寧に向き合いたい","長い付き合いの中で紹介をもらう働き方が合っている"],
+    hard:["土日祝が繁忙で、平日休みになる","販売台数の目標に加え、保険や点検の付帯目標がある会社もある","車の知識だけでなく、ローン・保険・税金の知識も必要"],
+    quals:["普通自動車免許（必須）","中古自動車査定士","損害保険募集人資格","整備関連の基礎知識（歓迎）"],
+    path:["営業スタッフ","チーフ・主任","店長","本部（商品企画・販売企画）、他メーカーや他業界の営業へ"],
+    videos:[
+      {id:"4RUhhNW09JM", title:"ディーラー（job tag 職業紹介動画）", src:"厚生労働省", point:"売った後のフォローがどれだけ長く続くかに注目。新規のお客様と既存のお客様、どちらへの対応が多いか数えてみよう。"}
+    ]
+  },
+  {
+    id:"mr", icon:"💊", name:"MR（医薬情報担当者）",
+    catch:"薬を売らない営業。医師に情報を届け、処方の判断を支える",
+    tags:["法人向け","情報提供型","専門性が高い"],
+    cats:["all","btob","mukei","route"],
+    spec:{shozai:"情報（薬の販売は卸が担当）", kokyaku:"医師・薬剤師（医療機関）", deai:"担当医療機関への定期訪問", cycle:"年単位"},
+    who:"病院・クリニックの医師、薬剤師、医療従事者",
+    duties:[
+      "担当する医療機関への訪問と、医師への医薬品情報の提供",
+      "効能・用法・副作用に関する最新のエビデンスの説明",
+      "副作用情報など安全性情報の収集と、自社への報告",
+      "説明会・勉強会の企画と運営",
+      "医薬品卸（MS）との連携、供給状況の確認",
+      "医学・薬学の継続学習、社内試験や資格更新への対応"
+    ],
+    day:[
+      ["8:30","直行で担当エリアへ。当日の訪問先と伝える情報を整理"],
+      ["9:00","クリニックを訪問。診療の合間に医師へ短時間で情報提供"],
+      ["11:00","病院の医局前で待機。担当医の空き時間を待つ"],
+      ["13:00","昼休憩／院内の説明会（ランチョンセミナー）を運営"],
+      ["15:00","薬剤部を訪問し、採用状況と在庫の確認"],
+      ["16:30","医薬品卸（MS）と情報交換"],
+      ["18:00","医師の診療終了後に再訪問、詳細な資料説明"],
+      ["19:30","直帰。報告書の入力と、翌日の資料準備"]
+    ],
+    tools:["タブレット（電子ディテーリング資料）","MR活動報告システム","医学論文データベース","社用車","オンライン面談ツール"],
+    good:["医療や科学に関心があり、学び続けられる","相手の時間を尊重した、簡潔な説明ができる","短期の成果より、長期的な信頼を大事にしたい"],
+    hard:["医師の都合に合わせるため、待機時間や夜間の訪問が発生する","規制が厳しく、できる営業活動が明確に制限されている","覚える医学・薬学の知識量が多く、社内試験も続く"],
+    quals:["MR認定試験（入社後に受験するのが一般的）","普通自動車免許","英語力（論文読解に有効）"],
+    path:["MR（担当エリア）","基幹病院・大学病院の担当","エリアマネージャー・所長","学術（メディカルアフェアーズ）・マーケティング・営業企画へ"],
+    videos:[
+      {id:"IfEokOUtYuM", title:"医薬情報担当者（MR）（job tag 職業紹介動画）", src:"厚生労働省", point:"「売り込む営業」とは違う立ち位置に注目。情報提供と安全性情報の収集が仕事の中心であることを確認しよう。"}
+    ]
+  }
+];
+
+const RELATED = [
+  {name:"経営コンサルタント", id:"nmyN-GEegFs", note:"課題を聞いて提案する点は営業と共通。無形商材の最上位。"},
+  {name:"広報・PR担当", id:"-7wUhfMsKzg", note:"売るのではなく知ってもらう仕事。営業と対になる役割。"},
+  {name:"銀行等窓口事務", id:"Nm-KiboNWxs", note:"金融業界の入口。窓口から渉外（営業）へ進む道もある。"}
+];
+
+/* 比較表: [新規開拓, 商談の長さ, 数字の重さ, 専門知識, 個人プレー度] 1-5 */
+const CMP = {
+  maker:    {v:[2,3,4,3,3], aite:"卸・小売チェーン", q:"普通自動車免許／簿記3級"},
+  route:    {v:[1,1,3,2,3], aite:"小売店・自販機設置先", q:"普通自動車免許"},
+  oa:       {v:[5,2,5,3,5], aite:"中小企業", q:"普通自動車免許"},
+  it:       {v:[4,4,4,5,2], aite:"企業の情シス・経営層", q:"ITパスポート／基本情報"},
+  ad:       {v:[4,3,4,4,3], aite:"広告主・代理店", q:"Webアナリスト検定"},
+  hoken:    {v:[5,3,5,4,5], aite:"個人・中小企業経営者", q:"生命保険募集人／FP3級"},
+  dairiten: {v:[3,3,4,4,2], aite:"代理店（販売パートナー）", q:"募集人資格／普通自動車免許"},
+  fudosan:  {v:[4,5,5,5,5], aite:"住宅を買う個人", q:"宅地建物取引士"},
+  dealer:   {v:[3,3,4,3,4], aite:"来店客・既存オーナー", q:"普通自動車免許／中古自動車査定士"},
+  mr:       {v:[2,5,3,5,2], aite:"医師・薬剤師", q:"MR認定試験"}
+};
+
+/* 診断 */
+const QUIZ = [
+  {
+    q:"お客様との出会い方、どれが一番耐えられそう？",
+    opts:[
+      {t:"自分から探しに行く（飛び込み・電話）", s:{oa:4, hoken:4, ad:2}},
+      {t:"決まった取引先を定期的に回る", s:{route:4, maker:3, mr:3, dairiten:3}},
+      {t:"興味を持って来てくれた人に対応する", s:{fudosan:4, dealer:4, it:2}}
+    ]
+  },
+  {
+    q:"扱う商材はどちらがいい？",
+    opts:[
+      {t:"形があって、見せながら説明できるもの", s:{maker:3, route:3, dealer:3, oa:2, fudosan:2}},
+      {t:"形はないが、仕組みや価値を説明するもの", s:{it:4, ad:3, hoken:2, dairiten:2}},
+      {t:"専門知識そのものが価値になるもの", s:{mr:4, it:2, fudosan:2}}
+    ]
+  },
+  {
+    q:"結果が出るまでの時間は、どちらが合う？",
+    opts:[
+      {t:"数日〜数週間で決着がつくほうがいい", s:{oa:4, route:3, hoken:3, dealer:2}},
+      {t:"数ヶ月かけて大きな一件を追いたい", s:{it:4, fudosan:4, mr:2}},
+      {t:"毎月コツコツ積み上がるのが安心", s:{maker:3, route:3, dairiten:3, dealer:2}}
+    ]
+  },
+  {
+    q:"給与と休みについて、正直なところは？",
+    opts:[
+      {t:"成果次第で大きく増えるほうがいい", s:{hoken:4, fudosan:4, oa:2}},
+      {t:"安定した固定給で、土日は休みたい", s:{maker:3, mr:3, it:3, route:2, dairiten:2}},
+      {t:"平日休みでも構わない。お客様に合わせられる", s:{fudosan:3, dealer:4, hoken:1}}
+    ]
+  },
+  {
+    q:"どんな役割で成果を出したい？",
+    opts:[
+      {t:"自分の力で数字をつくりたい", s:{oa:3, hoken:3, fudosan:3, dealer:2}},
+      {t:"チームや他部署と一緒に大きな案件を動かしたい", s:{it:4, ad:3, maker:2}},
+      {t:"人を育てたり、支援したりする形で貢献したい", s:{dairiten:4, mr:2, maker:1}},
+      {t:"専門知識を武器に信頼を得たい", s:{mr:4, it:2, fudosan:1}}
+    ]
+  }
+];
+
+/* ========== レンダリング ========== */
+const dots = n => '<span class="dots">' + '●'.repeat(n) + '<i>' + '●'.repeat(5-n) + '</i></span>';
+
+const FILTERS = [
+  {key:"all", label:"すべて（10職種）"},
+  {key:"btob", label:"法人向け（BtoB）"},
+  {key:"btoc", label:"個人向け（BtoC）"},
+  {key:"yukei", label:"有形商材"},
+  {key:"mukei", label:"無形商材"},
+  {key:"shinki", label:"新規開拓が中心"},
+  {key:"route", label:"既存顧客が中心"}
+];
+
+function renderGyokai(){
+  document.getElementById("gyoBody").innerHTML = GYOKAI.map(g=>`
+    <tr>
+      <td class="gyoname">${g.name}<br><span class="tagS ${g.type==="yu"?"t-yu":"t-mu"}">${g.type==="yu"?"有形":"無形"}</span></td>
+      <td>${g.what}</td><td>${g.who}</td><td>${g.how}</td>
+      <td>${g.span}</td><td>${g.kpi}</td><td>${g.feat}</td>
+    </tr>`).join("");
+}
+
+function renderFilters(){
+  document.getElementById("filters").innerHTML = FILTERS.map((f,i)=>
+    `<button class="chip" data-f="${f.key}" aria-pressed="${i===0}">${f.label}</button>`
+  ).join("");
+  document.querySelectorAll("#filters .chip").forEach(b=>{
+    b.addEventListener("click", ()=>{
+      document.querySelectorAll("#filters .chip").forEach(x=>x.setAttribute("aria-pressed","false"));
+      b.setAttribute("aria-pressed","true");
+      const k = b.dataset.f;
+      document.querySelectorAll(".job").forEach(j=>{
+        j.classList.toggle("hidden", !j.dataset.cats.split(",").includes(k));
+      });
+    });
+  });
+}
+
+function jobHTML(j){
+  return `
+  <article class="job" id="job-${j.id}" data-cats="${j.cats.join(",")}" open-state="0">
+    <div class="job-head" data-toggle="${j.id}">
+      <div class="job-badge">${j.icon}</div>
+      <div class="job-titles">
+        <h3>${j.name}</h3>
+        <div class="catch">${j.catch}</div>
+        <div class="job-tags">${j.tags.map(t=>`<span>${t}</span>`).join("")}</div>
+      </div>
+      <div class="toggle">くわしく見る <span class="arw">▾</span></div>
+    </div>
+    <div class="job-body">
+      <div class="blk" style="margin-top:1.2rem">
+        <h5>▍商材プロフィール（この営業の型）</h5>
+        <div class="spec">
+          <div class="specbox"><b>何を売る</b><span>${j.spec.shozai}</span></div>
+          <div class="specbox"><b>誰に売る</b><span>${j.spec.kokyaku}</span></div>
+          <div class="specbox"><b>出会い方</b><span>${j.spec.deai}</span></div>
+          <div class="specbox"><b>決まるまで</b><span>${j.spec.cycle}</span></div>
+        </div>
+      </div>
+      <div class="split">
+        <div>
+          <div class="blk">
+            <h5>▍誰を相手にする仕事か</h5>
+            <p>${j.who}</p>
+          </div>
+          <div class="blk">
+            <h5>▍具体的にやること</h5>
+            <ul>${j.duties.map(d=>`<li>${d}</li>`).join("")}</ul>
+          </div>
+          <div class="blk">
+            <h5>▍ある1日の流れ（例）</h5>
+            <ul class="timeline">${j.day.map(d=>`<li><span class="t">${d[0]}</span><span>${d[1]}</span></li>`).join("")}</ul>
+          </div>
+          <div class="blk">
+            <h5>▍よく使うツール</h5>
+            <div class="tools">${j.tools.map(t=>`<span>${t}</span>`).join("")}</div>
+          </div>
+          <div class="blk">
+            <h5>▍向き・大変さ</h5>
+            <div class="fit">
+              <div class="fitbox fit-good"><h6>こんな人に向く</h6><ul>${j.good.map(g=>`<li>${g}</li>`).join("")}</ul></div>
+              <div class="fitbox fit-hard"><h6>ここは覚悟が要る</h6><ul>${j.hard.map(h=>`<li>${h}</li>`).join("")}</ul></div>
+            </div>
+          </div>
+          <div class="blk">
+            <h5>▍役立つ資格</h5>
+            <div class="tools">${j.quals.map(q=>`<span>${q}</span>`).join("")}</div>
+          </div>
+          <div class="blk">
+            <h5>▍キャリアの伸ばし方</h5>
+            <div class="path">${j.path.map((p,i)=> (i? '<i>→</i>':'') + `<span>${p}</span>`).join("")}</div>
+          </div>
+        </div>
+        <div>
+          <div class="blk">
+            <h5>▍動画で見る</h5>
+            <div class="videos">
+              ${j.videos.map(v=>`
+                <div class="vid">
+                  <div class="vtitle">${v.title}</div>
+                  <div class="vmeta">出典：<b>${v.src}</b></div>
+                  <div class="ratio">
+                    <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/${v.id}?rel=0"
+                      title="${v.title}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="vpoint"><b>見るポイント：</b>${v.point}</div>
+                </div>`).join("")}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>`;
+}
+
+function renderJobs(){
+  document.getElementById("jobsList").innerHTML = JOBS.map(jobHTML).join("") + `
+    <article class="job" data-cats="all,btob,btoc,yukei,mukei,shinki,route" open-state="0" id="job-related">
+      <div class="job-head" data-toggle="related" style="border-left-color:#7b8794">
+        <div class="job-badge" style="background:#eeece7;color:#52606d">➕</div>
+        <div class="job-titles">
+          <h3>あわせて知っておきたい関連職種</h3>
+          <div class="catch">営業職の求人でよく隣に並ぶ／営業から進める3つの職種</div>
+        </div>
+        <div class="toggle">くわしく見る <span class="arw">▾</span></div>
+      </div>
+      <div class="job-body">
+        <div class="blk" style="margin-top:1.2rem">
+          <h5>▍動画で見る</h5>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">
+            ${RELATED.map(r=>`
+              <div class="vid">
+                <div class="vtitle">${r.name}（job tag 職業紹介動画）</div>
+                <div class="vmeta">出典：<b>厚生労働省</b></div>
+                <div class="ratio">
+                  <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/${r.id}?rel=0"
+                    title="${r.name}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="vpoint"><b>見るポイント：</b>${r.note}</div>
+              </div>`).join("")}
+          </div>
+        </div>
+      </div>
+    </article>`;
+
+  document.querySelectorAll(".job-head").forEach(h=>{
+    h.addEventListener("click", ()=>{
+      const art = h.closest(".job");
+      const open = art.getAttribute("open-state") === "1";
+      art.setAttribute("open-state", open ? "0" : "1");
+      h.querySelector(".toggle").firstChild.nodeValue = open ? "くわしく見る " : "閉じる ";
+    });
+  });
+}
+
+function renderCmp(){
+  document.getElementById("cmpBody").innerHTML = JOBS.map(j=>{
+    const c = CMP[j.id];
+    return `<tr>
+      <td class="jobname"><a href="#job-${j.id}" style="text-decoration:none">${j.icon} ${j.name}</a></td>
+      <td>${dots(c.v[0])}</td><td>${dots(c.v[1])}</td><td>${dots(c.v[2])}</td>
+      <td>${dots(c.v[3])}</td><td>${dots(c.v[4])}</td>
+      <td>${c.aite}</td><td>${c.q}</td>
+    </tr>`;
+  }).join("");
+}
+
+function renderQuiz(){
+  document.getElementById("quizBody").innerHTML = QUIZ.map((q,i)=>`
+    <div class="q" data-qi="${i}">
+      <p><b>Q${i+1}.</b>${q.q}</p>
+      <div class="opts">${q.opts.map((o,k)=>`<button data-qi="${i}" data-oi="${k}" aria-pressed="false">${o.t}</button>`).join("")}</div>
+    </div>`).join("");
+
+  document.querySelectorAll("#quizBody .opts button").forEach(b=>{
+    b.addEventListener("click", ()=>{
+      document.querySelectorAll(`#quizBody .opts button[data-qi="${b.dataset.qi}"]`)
+        .forEach(x=>x.setAttribute("aria-pressed","false"));
+      b.setAttribute("aria-pressed","true");
+    });
+  });
+}
+
+document.getElementById("calcBtn").addEventListener("click", ()=>{
+  const score = {};
+  JOBS.forEach(j=>score[j.id]=0);
+  let answered = 0;
+  document.querySelectorAll('#quizBody .opts button[aria-pressed="true"]').forEach(b=>{
+    answered++;
+    const s = QUIZ[+b.dataset.qi].opts[+b.dataset.oi].s;
+    for (const k in s) score[k] += s[k];
+  });
+  const res = document.getElementById("result");
+  if (answered === 0){
+    res.innerHTML = `<p class="note">まず質問に答えてみてください。</p>`;
+    res.classList.add("show"); return;
+  }
+  const top = Object.entries(score).sort((a,b)=>b[1]-a[1]).slice(0,3);
+  res.innerHTML = `
+    <h4 style="margin:0 0 .7rem;font-size:1.05rem">あなたと相性がよさそうな営業</h4>
+    ${top.map(([id],i)=>{
+      const j = JOBS.find(x=>x.id===id);
+      return `<div class="rescard">
+        <div class="rank">${["最も相性が良さそう","次に見てみたい","こちらも候補に"][i]}</div>
+        <h4>${j.icon} ${j.name}</h4>
+        <p>${j.catch}</p>
+        <a href="#job-${j.id}" onclick="openJob('${j.id}')">→ この職種の詳細と動画を見る</a>
+      </div>`;
+    }).join("")}
+    ${answered < QUIZ.length ? `<p class="note">※ ${QUIZ.length}問中${answered}問の回答です。すべて答えると精度が上がります。</p>` : ""}
+    <p class="note">この結果は「向いていない職種を消す」ためのものではありません。上位に出た職種の動画を見て、<strong>1日の流れを自分ごととして想像できるか</strong>で判断してください。</p>`;
+  res.classList.add("show");
+  res.scrollIntoView({behavior:"smooth", block:"nearest"});
+});
+
+document.getElementById("resetBtn").addEventListener("click", ()=>{
+  document.querySelectorAll("#quizBody .opts button").forEach(b=>b.setAttribute("aria-pressed","false"));
+  const r = document.getElementById("result"); r.classList.remove("show"); r.innerHTML="";
+});
+
+function openJob(id){
+  document.querySelectorAll("#filters .chip").forEach((x,i)=>x.setAttribute("aria-pressed", i===0 ? "true" : "false"));
+  document.querySelectorAll(".job").forEach(j=>j.classList.remove("hidden"));
+  const art = document.getElementById("job-"+id);
+  if(!art) return;
+  art.setAttribute("open-state","1");
+  art.querySelector(".toggle").firstChild.nodeValue = "閉じる ";
+}
+window.openJob = openJob;
+
+document.querySelectorAll(".zoomctl button").forEach(b=>{
+  b.addEventListener("click", ()=>{
+    document.querySelectorAll(".zoomctl button").forEach(x=>x.setAttribute("aria-pressed","false"));
+    b.setAttribute("aria-pressed","true");
+    document.documentElement.dataset.zoom = b.dataset.zoom;
+  });
+});
+
+renderGyokai();
+renderFilters();
+renderJobs();
+renderCmp();
+renderQuiz();
+</script>
+</body>
+</html>
