@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
 <meta name="description" content="学生のための営業職理解ガイド。営業は業界によって売るもの・相手・売り方・評価のされ方がまったく違います。10業界の営業を動画と1日の流れで比較できます。">
 <title>営業職まるわかりナビ｜業界でこんなに違う「営業」の中身</title>
 <style>
@@ -1638,7 +1640,7 @@ function compPick(spec,n){
     : COMP_CATS.flatMap(cat=>{const g=COMP_LIST.filter(c=>c[0]===cat);return g.length?[g[0],g[g.length-1]]:[];});
   if(kw.length){
     const hit=pool.filter(c=>kw.some(k=>(c[1]+c[2]).includes(k)));
-    if(hit.length>=3)pool=hit;
+    if(hit.length>=1)pool=hit;
   }
   const groups=["大手","中堅","地域","－"].map(sz=>pool.filter(c=>c[5]===sz));
   const out=[];let i=0;
